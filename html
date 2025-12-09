@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cambodia Time</title>
+    <style>
+        body { text-align: center; font-family: Arial; padding: 50px; }
+        .time { font-size: 48px; color: #032ea1; }
+        .country { font-size: 24px; color: #a10303; }
+        .flag { font-size: 60px; }
+    </style>
+</head>
+<body>
+    <div class="flag">🇰🇭</div>
+    <div class="country">Cambodia Time</div>
+    <div class="time" id="time">Loading...</div>
+    <script>
+        fetch('http://localhost:3000')
+            .then(r => r.json())
+            .then(data => {
+                document.getElementById('time').textContent = 
+                    data.time_cambodia_formatted;
+            });
+    </script>
+</body>
+</html>
