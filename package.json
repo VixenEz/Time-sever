@@ -1,0 +1,15 @@
+{
+  "name": "time-sever",
+  "version": "1.0.0",
+  "description": "A simple HTTP time server that returns current date/time in JSON format",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["time", "server", "api", "json"],
+  "author": "YourName",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
