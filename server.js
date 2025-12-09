@@ -9,8 +9,8 @@ const server = http.createServer((req, res) => {
   
   res.end(JSON.stringify({ 
     time_utc: now.toISOString(),
-    time_cambodia: cambodiaTime.toISOString(),
-    time_cambodia_formatted: cambodiaTime.toLocaleString('en-KH', { timeZone: 'Asia/Phnom_Penh' }),
+    time_cambodia: cambodiaTime.toISOString().replace('Z', '+07:00'),
+    time_cambodia_formatted: cambodiaTime.toLocaleString('en-US', { timeZone: 'Asia/Phnom_Penh' }),
     timestamp: Date.now(),
     timezone: "Asia/Phnom_Penh (UTC+7)",
     country: "Cambodia"
